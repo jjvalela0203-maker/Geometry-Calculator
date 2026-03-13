@@ -1,4 +1,5 @@
 #Calculadora Geometrica
+import math
 while True:
     print("=" *30, "CALCULADORA GEOMETRICA", "="*30) 
     print("¿Con que figura desea trabajar?:")
@@ -17,9 +18,10 @@ while True:
 
     opcion= int(input("Seleccione su opcion (1-10):"))
     
-    while opcion < 1 or opcion >9:
+    while opcion < 1 or opcion > 10:
         print("Opcion invalida")
         opcion= int(input("Seleccione su opcion (1-10):"))
+    
     if opcion == 1:
         while True:
             print("=" * 30, "OPERACIONES CON TRIANGULO", "=" * 30)
@@ -56,7 +58,7 @@ while True:
 
             sub_opcion_2= int(input("Seleccione su opcion (1-3):"))
             if sub_opcion_2 == 1:
-                print("=" * 30, "AREA DE UN CUADRADO", "=" * 30)
+                print("=" * 30, "AREA DE UN CUADRADO", "=" * 30,"(Por favor ingrese floats)")
                 base=float(input("Cual es la base?:"))
                 altura= float(input("Cual es la altura?:"))
                 print(f"Resultado:{base*altura}")
@@ -90,8 +92,23 @@ while True:
             print("3) Calcular Radio")
             print("4) Calcular diametro")
             print("5) Volver")
+            
             sub_opcion_4= int(input("Seleccione su opcion (1-5):"))
-
+            
+            if sub_opcion_4 == 1:
+                print("=" * 30, "AREA DE UN CIRCULO", "=" * 30,"(Por favor ingrese floats)")
+                radio=float(input("Cual es el radio?:"))
+                print(f"Resultado:{math.pi*(radio*radio)}")
+            elif sub_opcion_4 == 2:
+                lado_l=float(input("Cual es el lado largo?:"))
+                lado_c=float(input("Cual es el lado corto?:"))
+                print(f"Resultado:{(lado_c*2)+(lado_l*2)}")
+            elif sub_opcion_4 == 3:
+                print("=" * 30, "RADIO DE UN CIRCULO", "=" * 30,"(Por favor ingrese floats)")
+                diametro=float(input("Cual es el diametro?:"))
+                print(f"Resultado:{diametro/2}")
+            elif sub_opcion_4 == 5:
+                break
 
 
 
