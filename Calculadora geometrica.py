@@ -142,7 +142,7 @@ while True:
         while True:
             print("=" * 30, "OPERACIONES CON TRIANGULO RECTANGULO", "=" * 30)
             print("1) Calcular Hipotenusa")
-            print("2) Calcular Lado")
+            print("2) Calcular Cateto")
             print("3) Calcular Coseno de un angulo")
             print("4) Calcular Tangente de un angulo")
             print("5) Calcular Seno de un angulo")
@@ -152,12 +152,12 @@ while True:
             
             if sub_opcion_5 == 1:
                 print("=" * 30, "HIPOTENUSA DE UN TRIANGULO RECTANGULO", "=" * 30,"(Por favor ingrese floats)")
-                lado_a=float(input("Cual es el lado a?:"))
-                lado_b=float(input("Cual es el lado b?:"))
-                print(f"Resultado:{math.sqrt((lado_a*lado_a)+(lado_b*lado_b))}")
+                lado_a=float(input("Cual es el cateto a?:"))
+                lado_b=float(input("Cual es el cateto b?:"))
+                print(f"Resultado:{((lado_a*lado_a)+(lado_b*lado_b))**0.5}")
             
             elif sub_opcion_5 == 2:
-                print("=" * 30, "LADO DE UN TRIANGULO RECTANGULO", "=" * 30,"(Por favor ingrese floats)")
+                print("=" * 30, "CATETO DE UN TRIANGULO RECTANGULO", "=" * 30,"(Por favor ingrese floats)")
                 radio=float(input("Cual es el radio?:"))
                 print(f"Resultado:{2*math.pi*radio}")
             
