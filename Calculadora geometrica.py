@@ -18,14 +18,17 @@ while True:
 
     while True:
         try:
-            opcion= int(input("Seleccione su opcion (1-10):"))
-            break
+            opcion = int(input("Seleccione su opcion (1-10):"))
+
+            while opcion < 1 or opcion > 10:
+                print("Opcion invalida")
+                opcion = int(input("Seleccione su opcion (1-10):"))
+
+            else:
+                break
+
         except ValueError:
             print("Error: Por favor, introduce un número válido.")
-
-    while opcion < 1 or opcion > 10:
-        print("Opcion invalida")
-        opcion= int(input("Seleccione su opcion (1-10):"))
 
     if opcion == 1:
         while True:
@@ -37,24 +40,27 @@ while True:
 
             while True:
                 try:
-                    sub_opcion_1=int(input("Seleccione su opcion (1-4):"))
-                    break
+                    sub_opcion_1 = int(input("Seleccione su opcion (1-4):"))
+
+                    while sub_opcion_1 < 1 or sub_opcion_1 > 4:
+                        print("Opcion invalida")
+                        sub_opcion_1 = int(input("Seleccione su opcion (1-4):"))
+
+                    else:
+                        break
+
                 except ValueError:
                     print("Error: Por favor, introduce un número válido.")
 
-            while sub_opcion_1 < 1 or sub_opcion_1 > 4:
-                print("Opcion invalida")
-                opcion= int(input("Seleccione su opcion (1-4):"))
-
             if sub_opcion_1 == 1:
                 print("=" * 30, "AREA DE UN TRIANGULO", "=" * 30,"(Por favor ingrese floats)")
-                base=float(input("Cuanto mide la base?:"))
-                altura= float(input("Cuanto mide la altura?:"))
+                base=float(input("Cuanto mide la base?(cm):"))
+                altura= float(input("Cuanto mide la altura?(cm):"))
                 print(f"Resultado:{(base*altura)/2}cm al cuadrado")
 
             elif sub_opcion_1 == 2:
                 print("=" * 30, "PERIMETRO DE UN TRIANGULO", "=" * 30,"(Por favor ingrese floats)")
-                lado=float(input("Cuanto mide el lado?:"))
+                lado=float(input("Cuanto mide el lado?(cm):"))
                 print(f"Resultado:{lado*3}cm")
 
             elif sub_opcion_1 == 3:
@@ -73,15 +79,28 @@ while True:
             print("2) Perimetro")
             print("3) Volver")
 
-            sub_opcion_2= int(input("Seleccione su opcion (1-3):"))
+            while True:
+                try:
+                    sub_opcion_2 = int(input("Seleccione su opcion (1-3):"))
+
+                    while sub_opcion_2 < 1 or sub_opcion_2 > 3:
+                        print("Opcion invalida")
+                        sub_opcion_2 = int(input("Seleccione su opcion (1-3):"))
+
+                    else:
+                        break
+
+                except ValueError:
+                    print("Error: Por favor, introduce un número válido.")
+
             if sub_opcion_2 == 1:
                 print("=" * 30, "AREA DE UN CUADRADO", "=" * 30,"(Por favor ingrese floats)")
-                base=float(input("Cuanto mide la base?:"))
+                base=float(input("Cuanto mide la base?(cm):"))
                 print(f"Resultado:{base*2}cm al cuadrado")
 
             elif sub_opcion_2 == 2:
                 print("=" * 30, "PERIMETRO DE UN CUADRADO", "=" * 30,"(Por favor ingrese floats)")
-                lado=float(input("Cuanto mide el lado?:"))
+                lado=float(input("Cuanto mide el lado?(cm):"))
                 print(f"Resultado:{lado*4}cm")
 
             elif sub_opcion_2 == 3:
@@ -94,16 +113,28 @@ while True:
             print("2) Perimetro")
             print("3) Volver")
 
-            sub_opcion_3= int(input("Seleccione su opcion (1-3):"))
+            while True:
+                try:
+                    sub_opcion_3 = int(input("Seleccione su opcion (1-3):"))
+
+                    while sub_opcion_3 < 1 or sub_opcion_3 > 3:
+                        print("Opcion invalida")
+                        sub_opcion_3 = int(input("Seleccione su opcion (1-3):"))
+
+                    else:
+                        break
+
+                except ValueError:
+                    print("Error: Por favor, introduce un número válido.")
 
             if sub_opcion_3 == 1:
-                base=float(input("Cuanto mide la base?:"))
-                altura= float(input("Cuanto mide la altura?:"))
+                base=float(input("Cuanto mide la base?(cm):"))
+                altura= float(input("Cuanto mide la altura?(cm):"))
                 print(f"Resultado:{base*altura}cm al cuadrado")
 
             elif sub_opcion_3 == 2:
-                lado_l=float(input("Cuanto mide el lado largo?:"))
-                lado_c=float(input("Cuanto mide el lado corto?:"))
+                lado_l=float(input("Cuanto mide el lado largo?(cm):"))
+                lado_c=float(input("Cuanto mide el lado corto?(cm):"))
                 print(f"Resultado:{(lado_c*2)+(lado_l*2)}cm")
 
             elif sub_opcion_3 == 3:
@@ -118,26 +149,38 @@ while True:
             print("4) Calcular Diametro")
             print("5) Volver")
 
-            sub_opcion_4= int(input("Seleccione su opcion (1-5):"))
+            while True:
+                try:
+                    sub_opcion_4 = int(input("Seleccione su opcion (1-5):"))
+
+                    while sub_opcion_4 < 1 or sub_opcion_4 > 5:
+                        print("Opcion invalida")
+                        sub_opcion_4 = int(input("Seleccione su opcion (1-5):"))
+
+                    else:
+                        break
+
+                except ValueError:
+                    print("Error: Por favor, introduce un número válido.")
 
             if sub_opcion_4 == 1:
                 print("=" * 30, "AREA DE UN CIRCULO", "=" * 30,"(Por favor ingrese floats)")
-                radio=float(input("Cuanto es el radio?:"))
+                radio=float(input("Cuanto mide el radio?(cm):"))
                 print(f"Resultado:{math.pi*(radio*radio)}cm al cuadrado")
 
             elif sub_opcion_4 == 2:
-                print("=" * 30, "PERIMETRO/CIRCUNFERENCIA DE UN CIRCULO", "=" * 30,"(Por favor ingrese floats)")
-                radio=float(input("Cuanto es el radio?:"))
+                print("=" * 30, "PERIMETRO DE UN CIRCULO", "=" * 30,"(Por favor ingrese floats)")
+                radio=float(input("Cuanto mide el radio?(cm):"))
                 print(f"Resultado:{2*math.pi*radio}cm")
 
             elif sub_opcion_4 == 3:
                 print("=" * 30, "RADIO DE UN CIRCULO", "=" * 30,"(Por favor ingrese floats)")
-                diametro=float(input("Cuanto es el diametro?:"))
+                diametro=float(input("Cuanto mide el diametro?(cm):"))
                 print(f"Resultado:{diametro/2}cm")
 
             elif sub_opcion_4 == 4:
                 print("=" * 30, "DIAMETRO DE UN CIRCULO", "=" * 30,"(Por favor ingrese floats)")
-                radio=float(input("Cuanto es el radio?:"))
+                radio=float(input("Cuanto mide el radio?(cm):"))
                 print(f"Resultado:{radio*2}cm")
 
             elif sub_opcion_4 == 5:
@@ -151,14 +194,17 @@ while True:
 
             while True:
                 try:
-                    sub_opcion_5= int(input("Seleccione su opcion (1-3):"))
-                    break
+                    sub_opcion_5 = int(input("Seleccione su opcion (1-3):"))
+
+                    while sub_opcion_5 < 1 or sub_opcion_5 > 3:
+                        print("Opcion invalida")
+                        sub_opcion_5 = int(input("Seleccione su opcion (1-3):"))
+
+                    else:
+                        break
+
                 except ValueError:
                     print("Error: Por favor, introduce un número válido.")
-
-            while sub_opcion_5 < 1 or sub_opcion_5 > 3:
-                print("Opcion invalida")
-                sub_opcion_5= int(input("Seleccione su opcion (1-3):"))
 
             if sub_opcion_5 == 1:
                 print("=" * 30, "HIPOTENUSA DE UN TRIANGULO RECTANGULO", "=" * 30,"(Por favor ingrese floats)")
@@ -182,14 +228,17 @@ while True:
 
             while True:
                 try:
-                    sub_opcion_6=int(input("Seleccione su opcion (1-2):"))
-                    break
+                    sub_opcion_6 = int(input("Seleccione su opcion (1-2):"))
+
+                    while sub_opcion_6 < 1 or sub_opcion_6 > 2:
+                        print("Opcion invalida")
+                        sub_opcion_6 = int(input("Seleccione su opcion (1-2):"))
+
+                    else:
+                        break
+
                 except ValueError:
                     print("Error: Por favor, introduce un número válido.")
-
-            while sub_opcion_6 < 1 or sub_opcion_6 > 2:
-                print("Opcion invalida")
-                sub_opcion_6= int(input("Seleccione su opcion (1-2):"))
 
             if sub_opcion_6 == 1:
                 print("=" * 30, "VOLUMEN DE UN CILINDRO", "=" * 30,"(Por favor ingrese floats)")
@@ -206,11 +255,19 @@ while True:
             print("1) Volumen")
             print("2) Volver")
 
-            sub_opcion_7=int(input("Seleccione su opcion (1-2):"))
+            while True:
+                try:
+                    sub_opcion_7 = int(input("Seleccione su opcion (1-2):"))
 
-            while sub_opcion_7 < 1 or sub_opcion_7 > 2:
-                print("Opcion invalida")
-                sub_opcion_7= int(input("Seleccione su opcion (1-2):"))
+                    while sub_opcion_7 < 1 or sub_opcion_7 > 2:
+                        print("Opcion invalida")
+                        sub_opcion_7 = int(input("Seleccione su opcion (1-2):"))
+
+                    else:
+                        break
+
+                except ValueError:
+                    print("Error: Por favor, introduce un número válido.")
 
             if sub_opcion_7 == 1:
                 print("=" * 30, "VOLUMEN DE UNA PIRAMIDE CON BASE CUADRADADA", "=" * 30, "(Por favor ingrese floats)")
@@ -227,11 +284,20 @@ while True:
             print("1) Volumen")
             print("2) Volver")
 
-            sub_opcion_8= int(input("Seleccione su opcion (1-2):"))
+            while True:
+                try:
+                    sub_opcion_8 = int(input("Seleccione su opcion (1-2):"))
 
-            while sub_opcion_8 < 1 or sub_opcion_8 > 2:
-                print("Opcion invalida")
-                sub_opcion_8= int(input("Seleccione su opcion (1-2):"))
+                    while sub_opcion_8 < 1 or sub_opcion_8 > 2:
+                        print("Opcion invalida")
+                        sub_opcion_8 = int(input("Seleccione su opcion (1-2):"))
+
+                    else:
+                        break
+
+                except ValueError:
+                    print("Error: Por favor, introduce un número válido.")
+
 
             if sub_opcion_8 == 1:
                 print("=" * 30, "VOLUMEN DE UNA ESFERA", "=" * 30, "(Por favor ingrese floats)")
@@ -241,21 +307,33 @@ while True:
             elif sub_opcion_8 == 2:
                 break
 
+    if opcion == 9:
+        while True:
+            print("=" * 30, "OPERACIONES CON UN CUBO", "=" * 30)
+            print("1) Volumen")
+            print("2) Volver")
 
+            while True:
+                try:
+                    sub_opcion_9 = int(input("Seleccione su opcion (1-2):"))
 
+                    while sub_opcion_9 < 1 or sub_opcion_9 > 2:
+                        print("Opcion invalida")
+                        sub_opcion_9 = int(input("Seleccione su opcion (1-2):"))
 
+                    else:
+                        break
 
+                except ValueError:
+                    print("Error: Por favor, introduce un número válido.")
 
+            if sub_opcion_9 == 1:
+                print("=" * 30, "VOLUMEN DE UN CUBO", "=" * 30, "(Por favor ingrese floats)")
+                arista=float(input("Cuanto mide una arista del cubo? (cm):"))
+                print(f"Resultado:{arista**3}cm al cubo")
 
-
-
-
-
-
-
-
-
-
+            if sub_opcion_9 == 2:
+                break
 
     if opcion == 10:
         print("=" * 30, "GOODBYE", "=" * 30)
